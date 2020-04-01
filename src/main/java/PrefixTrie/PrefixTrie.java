@@ -147,7 +147,7 @@ public class PrefixTrie {
                 return false;
             } else {
                 if (getNode(start.next, letter).next.isEmpty() && a == len - 1) {
-                    return true;
+                    return true; 
                 } else if (a == len - 1 && !getNode(start.next, letter).next.isEmpty()) {
                     return false;
                 } else if (a == len - 1 && getNode(start.next, letter).leaf) return true;
