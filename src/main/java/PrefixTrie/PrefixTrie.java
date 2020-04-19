@@ -126,7 +126,7 @@ public class PrefixTrie {
                     break;
                 } else {//случаи, когда буква, которую надо удалить находится нанужном нам уровне, и нам всё равно, есть ли дети. Она должна быть удалена
                     begin.next.remove(getNode(begin.next, letterOne));// удаление
-                    break;// случай обычный с детьми
+                    break;
                 }
             } else if (begin.next.contains(new Node(letterOne, new ArrayList<Node>(), false))) {//условие перехода на следующий узел
                 begin = getNode(begin.next, letterOne);// переход дальше
@@ -136,7 +136,7 @@ public class PrefixTrie {
         return true;//удаление проведено успешно
     }
 
-    
+
     public boolean find (String s) {
         if (ThrowEx(s)) throw new IllegalArgumentException();
         int a = 0;
